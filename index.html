@@ -26,33 +26,39 @@
             text-align: center;
             margin-bottom: 10px;
         }
-        .navbar-nav {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
         .intro {
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Added to distribute space */
             margin-bottom: 30px;
         }
+
         .intro-text {
             flex: 2;
         }
+
         .intro-image {
             flex: 1;
             text-align: right;
         }
-        .intro-image img {
-            max-width: 100%;
-            max-height: 200px; /* Added to limit image height */
-            height: auto;
-            border-radius: 5px;
+
+        .navbar-nav {
+          
         }
         section {
             margin-bottom: 30px;
         }
+
+        .intro-image img {
+            max-width: 200px; /* Resize image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px;
+            float: right; /* Align to the right */
+            margin-left: 20px; /* Add spacing between text and image */
+        }
+
+
+
+
         ul {
             list-style: disc;
             padding-left: 20px;
@@ -67,18 +73,33 @@
             margin-bottom: 10px;
         }
         @media (max-width: 767px) {
+            .intro {
+                flex-direction: column;
+                text-align: left;
+            }
+            .intro-image {
+                text-align: center;
+                margin-top: 20px;
+                margin-left: 0; /* Remove left margin on small screens */
+                max-width: 100%; /* Allow image to take full width on small screens */
+            }
+
+
+        }
+
     </style>
 </head>
-<body
+<body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Jyotirmaan Srivastava</a>
+                
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="https://www.linkedin.com/in/jyotirmaan-srivastava-6335b722b">LinkedIn</a>
                         </li>
@@ -86,7 +107,7 @@
                             <a class="nav-link" href="https://github.com/ramansrivastava">GitHub</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="src/assets/Jyotirmaan's Resume (2).pdf">Resume</a>
+                            <a class="nav-link" href="src/assets/Jyotirmaan's Resume (3).pdf">Resume</a>
                         </li>
                     </ul>
                 </div>
@@ -94,12 +115,12 @@
         </nav>
         <div class="intro">
             <div class="intro-text" style="margin-right: 20px;">
-                <h1 style="text-align: left;">Jyotirmaan Srivastava</h1>
+                <h1 style="text-align: left; ">Jyotirmaan Srivastava</h1>
                 <p style="margin-top: 20px;">
                     <strong>Passionate</strong> and <strong>detail-oriented Computer Science Engineering student</strong> with a growing interest in <strong>Generative AI</strong>, <strong>Large Language Models (LLMs)</strong>, and <strong>agentic systems</strong>. Proven ability to manage and execute technical projects showcased through successful hackathon participation and hands-on experimentation with tools like <strong>Crew AI</strong>, <strong>Cursor AI</strong>, and more. Looking forward to applying skills in AI-driven organizations and continuing to innovate in the evolving tech landscape.
                 </p>
             </div>
-            <div class="intro-image">
+            <div class="intro-image" >
                 <img src="src/assets/WhatsApp Image 2024-12-15 at 10.46.19_859e7fa0.jpg" alt="Your Image">
 
             </div>
@@ -108,6 +129,7 @@
         <section>
             <h2>Education</h2>
             <p><strong>SRM University</strong>, TN, IN (2021 - 2025) <br> B.Tech in <strong>Computer Science Engineering</strong>, CGPA: 8.25</p>
+            <hr>
         </section>
 
         <section>
@@ -115,8 +137,10 @@
             <p><strong>Programming Languages:</strong> Python <br>
                <strong>Databases:</strong> MySQL, MongoDB <br>
                <strong>Frameworks:</strong> React, CrewAI, Google-adk <br>
+                
                <strong>Softwares / Tools:</strong> Figma, GitHub, Vite, Crew AI, Google Studio, Cursor AI, GitHub-Copilot</p>
         </section>
+        <hr>
 
         <section>
             <h2>Projects</h2>
@@ -124,6 +148,7 @@
             <div class="project"><strong>Trip Planning Agentic System | GenAI (Spring 2025):</strong> Built a <strong>travel assistant agent</strong> using <strong>Crew AI</strong> that automates itinerary generation. Integrated multiple specialized agents. Used <strong>LLMs</strong> to dynamically generate personalized travel plans.</div>
             <div class="project"><strong>Latest AI News Aggregator | GenAI (Spring 2025):</strong> Designed and deployed an agentic workflow using <strong>Crew AI</strong> to collect, summarize, and categorize <strong>AI news</strong>. Built agents for scraping, summarization, and classification. Deployed a dashboard for live news feed.</div>
         </section>
+        <hr>
 
         <!-- Add sections for Certificates and Achievements similarly -->
 

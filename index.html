@@ -41,10 +41,17 @@
             text-align: right;
         }
 
-        .navbar-nav {
-          
+        .navbar-nav {         
+          padding-left: 0; /* Remove padding */
         }
-        section {
+
+        @media (max-width: 767px) {
+          .navbar-nav {            
+            flex-direction: row; /* Align nav items horizontally */
+            gap: 10px; /* Add spacing between items */
+          }
+        }
+          section {
             margin-bottom: 30px;
         }
 
@@ -81,6 +88,8 @@
                 text-align: center;
                 margin-top: 20px;
                 margin-left: 0; /* Remove left margin on small screens */
+                float: none; /* Remove float on small screens */
+                display: block; /* Ensure it's a block element */
                 max-width: 100%; /* Allow image to take full width on small screens */
             }
 
@@ -92,39 +101,34 @@
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-            <div class="container-fluid">
-                
+          <div class="container-fluid">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.linkedin.com/in/jyotirmaan-srivastava-6335b722b">LinkedIn</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/ramansrivastava">GitHub</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="src/assets/Jyotirmaan's Resume (3).pdf">Resume</a>
+              </li>
+            </ul>
+          </div>
+        </nav>       
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.linkedin.com/in/jyotirmaan-srivastava-6335b722b">LinkedIn</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://github.com/ramansrivastava">GitHub</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="src/assets/Jyotirmaan's Resume (3).pdf">Resume</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
         <div class="intro">
+
             <div class="intro-text" style="margin-right: 20px;">
                 <h1 style="text-align: left; ">Jyotirmaan Srivastava</h1>
                 <p style="margin-top: 20px;">
                     <strong>Passionate</strong> and <strong>detail-oriented Computer Science Engineering student</strong> with a growing interest in <strong>Generative AI</strong>, <strong>Large Language Models (LLMs)</strong>, and <strong>agentic systems</strong>. Proven ability to manage and execute technical projects showcased through successful hackathon participation and hands-on experimentation with tools like <strong>Crew AI</strong>, <strong>Cursor AI</strong>, and more. Looking forward to applying skills in AI-driven organizations and continuing to innovate in the evolving tech landscape.
                 </p>
             </div>
-            <div class="intro-image" >
+            <div class="intro-image">
                 <img src="src/assets/WhatsApp Image 2024-12-15 at 10.46.19_859e7fa0.jpg" alt="Your Image">
-
             </div>
         </div>
+
 
         <section>
             <h2>Education</h2>
@@ -137,7 +141,7 @@
             <p><strong>Programming Languages:</strong> Python <br>
                <strong>Databases:</strong> MySQL, MongoDB <br>
                <strong>Frameworks:</strong> React, CrewAI, Google-adk <br>
-                
+
                <strong>Softwares / Tools:</strong> Figma, GitHub, Vite, Crew AI, Google Studio, Cursor AI, GitHub-Copilot</p>
         </section>
         <hr>
